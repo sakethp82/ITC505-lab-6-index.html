@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage - ITC 505 Lab 6</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rock,Paper, Scissors,Game - ITC 505 Lab 6</h1>
+    </header>
+
+    <nav>
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="#game" onclick="showSection('game')">Home</a></li>
+            <li><a href="#game" onclick="showSection('game')">Rules</a></li>
+            <li><a href="#game" onclick="showSection('game')">Rock, Paper, Scissors</a></li>            
+        </ul>
+    </nav>
+
+    <section id="game" class="main-content" style="display: block;">
+        <h2>Rock, Paper, Scissors</h2>
+
+        <div class="instructions">
+            <p><strong>How to Play:</strong></p>
+            <ul>
+                <li>Click on one of the buttons: Rock, Paper, or Scissors.</li>
+                <li>The computer will randomly select one of the three options.</li>
+                <li>The winner is determined based on the rules below:</li>
+                <ul>
+                    <li>Rock beats Scissors</li>
+                    <li>Scissors beats Paper</li>
+                    <li>Paper beats Rock</li>
+                </ul>
+            </ul>
+            <p>The first player to reach 5 points wins the game!</p>
+        </div>
+
+        <div class="game-container">
+            <div class="game-buttons">
+                <button onclick="play('rock')">Rock</button>
+                <button onclick="play('paper')">Paper</button>
+                <button onclick="play('scissors')">Scissors</button>
+            </div>
+            <div id="playerChoice" class="choice-label">Your Choice: <span id="playerChoiceValue">None</span></div>
+            <div id="computerChoice" class="choice-label">Computer's Choice: <span id="computerChoiceValue">None</span></div>
+            <p id="result"></p>
+            <div id="score">
+                <p>Your Score: <span id="playerScore">0</span></p>
+                <p>Computer Score: <span id="computerScore">0</span></p>
+            </div>
+            <p id="gameStatus"></p>
+        </div>
+    </section>
+
+    <section class="ad">
+        <h2>Buy These Amazing Products!</h2>
+        <a href="https://www.amazon.com/Apple-iPhone-Version-256GB-Titanium/dp/B0DPDK3JVN/ref=sr_1_2?crid=2SF3N792N2312&dib=eyJ2IjoiMSJ9.khqJo1RRIw_uAr9hSrYIa6T66yB_R1_C4hWrYln_U8NzUuSXGjmuvD62mH00qdRj2w4-EaYOzEfH5Sdw1v860xhNfb3hpHmOFrj8Bn5K08dW_Fr-NodIhI2FQlc9JJpt6Gwd6NMfTlaMQfuagZrLXfUBDAHR93-NjYhPsbTG9L6p6ukcpDadqIoUPT1-uaYcWzuY1kXFSLZanHj3ed2ejMgtV2JCxScFZA2S__DdGIg.addP10pP2y3DznjKhNl1bvZn0qvW8XMXEv0qKOiciRQ&dib_tag=se&keywords=iphone%2B16%2Bpro%2Bmax&qid=1743468460&sprefix=iphone%2B16%2Bpro%2Bmax%2Caps%2C194&sr=8-2&th=1" target="_blank">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.DAZvhmzO0sxCp-uWdJBEawHaFa&pid=Api&P=0&h=180" alt="Amazon Ad">
+        </a>
+    </section>
+
+    <section id="addendum">
+        <h2>Project Addendum</h2>
+        <p>This web page is part of the ITC 505 Lab 6 assignment, where we focused on using basic HTML, CSS, and JavaScript to create an interactive webpage. Below is a summary of key details:</p>
+        <h3>Technologies Used:</h3>
+        <ul>
+            <li><strong>HTML5:</strong> Used to structure the content of the page.</li>
+            <li><strong>CSS3:</strong> Applied for styling the layout, including grid systems, colors, and typography.</li>
+            <li><strong>JavaScript:</strong> Implemented to create an interactive "Rock, Paper, Scissors" game and dynamic menu navigation using event listeners and DOM manipulation.</li>
+        </ul>
+        <h3>Future Enhancements:</h3>
+        <ul>
+            <li>Add a timer and scoring system to the game for added complexity.</li>
+            <li>Introduce ARIA labels and keyboard navigation for improved accessibility.</li>
+        </ul>
+    </section>
+
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Last Updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
